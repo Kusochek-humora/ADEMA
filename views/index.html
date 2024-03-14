@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="forms-wrapper">
+        <div class="tab-header">
+            <button class="tab" type="button">Регистрация</button>
+            <button class="tab" type="button">Авторизация</button>
+        </div>
+
+        <form class="form" id="reg">
+            <label for="login-1">Придумайте логин</label>
+            <input type="text" id="login-1" name="login" required><br>
+
+            <label for="password">Придумайте пароль</label>
+            <input type="password-1" id="password-1" name="password" required><br>
+
+            <button type="button" class="reg">Зарегистрироваться</button>
+        </form>
+
+        <form style="display: none;" class="form" id="login">
+            <label for="login-2">Введите логин:</label>
+            <input type="text" id="login-2" name="login" required>
+
+            <label for="password">Введите пароль</label>
+            <input type="password" id="password-2" name="password">
+
+            <button type="button" class="login">Войти</button>
+        </form>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+    <script src="/javascript/modal.js"></script>
+    <script id="main" src="/javascript/login-reg.js"></script>
+</body>
+
+</html>

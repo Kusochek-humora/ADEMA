@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню</title>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    /* Стили для модального окна */
+    .custom-modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <nav class="container nav__container">
+            <img class="logo" src="/image/logo.svg" alt="лого">
+            <ul class="list">
+                <li class="list__item list__item--id list__link">
+
+                </li>
+                <li class="list__item list__item--login list__link">
+
+                </li>
+                <li class="list__item"><a href="/profile" class="list__link">Профиль</a></li>
+                <li class="list__item"><a href="#" class="list__link">Заказать</a></li>
+                <li class="list__item"><a href="/" class="list__link logout">Выход</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+
+        </div>
+    </div>
+
+    <h2 class="title">Список блюд</h2>
+    <div class="container">
+
+
+        <div class="dishes-list" id="dishesList" style="margin-bottom: 150px;">
+
+        </div>
+    </div>
+    <div class="container">
+
+
+        <!-- Форма для создания нового заказа -->
+        <h2 class="title">Сделать заказ</h2>
+        <form id="createOrderForm">
+            <label for="userName">Ваш логин</label>
+            <input type="text" id="userName" required>
+            <br>
+            <label for="dishID">Номер блюда</label>
+            <input type="number" id="dishID" required>
+            <br>
+            <button type="button" id="create">Заказать</button>
+        </form>
+
+    </div>
+
+
+
+    <div class="container" style="margin-top: 150px; margin-bottom: 100px;">
+        <h1 class="title">Оставьте отзыв о нашем ресторане !</h1>
+        <form id="telegramForm">
+            <label for="message">Сообщение:</label>
+            <input type="text" id="message" name="message" required>
+            <button type="button" id="send_msg">Отправить</button>
+        </form>
+    </div>
+
+
+
+
+
+    <!-- <button onclick="openCustomModal()">Открыть модальное окно</button> -->
+
+    <!-- Модальное окно с другим идентификатором и классом -->
+    <div class="custom-modal" id="customModal">
+        <p id="modal-text"></p>
+    </div>
+    <script src="/javascript/order.js"></script>
+    <script src="/javascript/modal.js"></script>
+    <script id="main" src="/javascript/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,399 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    /* height: 100%; */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: 400;
+}
+
+form {
+    margin: 0;
+}
+
+fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+address {
+    font-style: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+input {
+    border: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    padding: 0 16px 0;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+
+.container-fluid {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Apply basic styles to the forms-wrapper */
+.forms-wrapper {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Apply styles to both forms */
+.form {
+    margin-bottom: 20px;
+}
+
+/* Style labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tab-header {
+    display: flex;
+    gap: 0 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+
+}
+
+.tab {
+    background-color: #008CBA;
+    transition: 0.3s all;
+}
+
+.tab.active {
+    background-color: tomato;
+}
+
+/* Style input fields */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Style buttons */
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the Register button */
+
+
+/* Style the Login button */
+.login,
+.reg {
+    background-color: #4CAF50;
+}
+
+/* Add hover effect to buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content p {
+    font-size: 28px;
+    color: black;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header {
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+}
+
+/* .container {
+    display: flex;
+    align-items: center;
+} */
+.nav__container {
+    display: flex;
+    align-items: center;
+
+}
+
+.modal-text-descr {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.desrc-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.userList {
+    margin-top: 100px;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.text-order {
+    font-size: 18px;
+}
+
+.logo {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: auto;
+}
+
+.modal-content-2 {
+   
+    display: flex;
+    flex-direction: column;
+}
+
+.delete,
+.delete-user {
+    background-color: red !important;
+}
+
+.delete {
+    margin-top: 20px;
+}
+
+button.delete-user {
+
+    margin-left: auto;
+}
+
+.uset-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+}
+
+.list {
+    display: flex;
+    gap: 0 15px;
+}
+
+.list__link {
+    font-size: 24px;
+}
+
+.item-user {
+    display: flex;
+
+    gap: 0 20px;
+    max-width: 100%;
+}
+
+.dishes {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+textarea {
+    display: inline-block;
+    resize: vertical;
+    width: 100%;
+    padding: 10px;
+}
+
+.dish-form {
+    max-width: 100%;
+    width: 100%;
+}
+
+.dishes-list {
+    padding-top: 100px;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.update {
+    background-color: #008CBA !important;
+    margin-top: 10px;
+}
+
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+.card__image {
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+
+.title {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.card__title {
+    font-size: 24px;
+}
+
+.card__price {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card__text {
+    font-size: 18px;
+}
+
+.card__image>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+legend {
+    font-size: 48px;
+    margin-bottom: 100px;
+}

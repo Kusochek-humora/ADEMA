@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ Панель</title>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <ul class="uset-list" id="userList"></ul>
+    </div>
+
+    <section class="dishes">
+        <div class="container">
+            <form class="dish-form" id="form-dish" enctype="multipart/form-data">
+                <legend>Создание нового блюда</legend>
+                <label for="Name">Название блюда</label>
+                <input type="text" id="Name" name="name" required>
+                <label for="Price">Цена</label>
+                <input type="number" id="Price" name="price" required>
+                <label for="Description">Описание</label>
+                <textarea id="Description" name="description" required></textarea>
+                <label for="image">Загрузить фотку</label>
+                <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png, .gif">
+                <button class="form-dish">Создать</button>
+            </form>
+        </div>
+        <h2 class="title">Список блюд</h2>
+        <div class="container">
+
+
+            <div class="dishes-list" id="dishesList">
+
+            </div>
+        </div>
+
+        <!-- <div class="container">
+        
+            <input type="text" id="searchInput" placeholder="Введите запрос для поиска">
+
+    
+            <button type="button" id="search">Искать</button>
+
+           
+            <div id="searchResults"></div>
+
+        </div> -->
+    </section>
+
+    <div class="container">
+        <ul id="orderList"></ul>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <!-- Форма обновления блюда -->
+            <form id="updateForm" enctype="multipart/form-data">
+                <label for="updateName">Новое название блюда:</label>
+                <input type="text" id="updateName">
+
+                <label for="updateDescription">Новое описание блюда:</label>
+                <textarea id="updateDescription"></textarea>
+
+                <label for="updatePrice">Новая цена:</label>
+                <input type="number" id="updatePrice">
+
+                <label for="updateImage">Выберите новую фотографию:</label>
+                <input type="file" id="updateImage" accept=".jpg, .jpeg, .png, .gif">
+
+                <button type="button" id="updateButton">Обновить блюдо</button>
+                <button type="button" id="closeModalButton">Закрыть</button>
+            </form>
+
+            <!-- Кнопка для закрытия модального окна -->
+
+        </div>
+    </div>
+
+    <div id="modal-descr" class="modal" style="display: none;">
+        <div class="modal-content modal-content-2">
+            <div class=" modal-text-descr" id="modal-text-descr">
+
+            </div> <button type="button" id="close-descr" style="margin-top: 30px;">Закрыть</button>
+        </div>
+
+
+    </div>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 500px;
+            height: auto;
+        }
+
+        /* Стили для кнопки открытия модального окна */
+        #openModalButton {
+            cursor: pointer;
+        }
+
+        /* Стили для кнопки закрытия модального окна */
+        #closeModalButton {
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+
+    </script>
+    <script src="/javascript/admin.js"></script>
+</body>
+
+</html>
